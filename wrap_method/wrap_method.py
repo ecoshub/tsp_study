@@ -2,7 +2,6 @@ import math
 import matplotlib.pyplot as plt
 import seaborn as sns
 import random
-import time
 
 
 def create_points(number_of_points, space_size, seed):
