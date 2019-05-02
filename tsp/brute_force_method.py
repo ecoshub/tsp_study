@@ -16,8 +16,10 @@ def create_points(number_of_points, space_size, seed):
     points = list(zip(x_es, y_s))
     return points
 
-# calculating a matrix that holds all the distance informations point to point.
-# so do not repeat it self to mesure same distance over and over again.
+
+
+''' calculating a matrix that holds all the distance informations point to point.
+so do not repeat it self to mesure same distance over and over again.'''
 def create_distance_matrix(points):
     # size of points set.
     len_points = len(points)
@@ -29,6 +31,8 @@ def create_distance_matrix(points):
             distance = math.sqrt((points[i][0] - points[j][0])**2 + (points[i][1] - points[j][1])**2)
             distances[i][j] = distance
     return distances
+
+# trying all posible permutations.
 
 
 def minumum_permutation_calculation(points, distance_matrix):
