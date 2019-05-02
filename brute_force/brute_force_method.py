@@ -74,27 +74,27 @@ def minumum_permutation_calculation(points, distance_matrix):
 
 def draw_minimum_distance(points, space_size, minimum_distance, minimum_permutation):
     # drawing plot for visualising points and route.
-    len_per = len(minimum_permutation)
+    len_points = len(points)
     # setting plotting environment.
     sns.set(style='darkgrid')
     plt.xlim(-1, space_size + 1)
     plt.ylim(-1, space_size + 1)
     plt.gca().set_aspect('equal', adjustable='box')
     plt.title('minimum distance: {}'.format(minimum_distance))
-    for i in range(len_per - 1):
+    for i in range(len_points - 1):
         # plotting point.
         plt.plot(points[i][0], points[i][1], 'go')
         # drawing line between points.
-        if i == len_per - 1:
+        if i == len_points - 1:
             # connetting first point to last.
-            last_to_first_x = points[minimum_permutation[i]][0], points[minimum_permutation[0]][0]
-            last_to_first_y = points[minimum_permutation[i]][1], points[minimum_permutation[0]][1]
+            last_to_first_x = [points[minimum_permutation[i]][0], points[minimum_permutation[0]][0]]
+            last_to_first_y = [points[minimum_permutation[i]][1], points[minimum_permutation[0]][1]]
             plt.plot(last_to_first_x, last_to_first_y)
             plt.text(points[minimum_permutation[i]][0], points[minimum_permutation[i]][1], minimum_permutation[i])
         else:
             # connetting point with next point.
-            last_to_first_x = points[minimum_permutation[i]][0], points[minimum_permutation[i + 1]][0]
-            last_to_first_y = points[minimum_permutation[i]][1], points[minimum_permutation[i + 1]][1]
+            last_to_first_x = [points[minimum_permutation[i]][0], points[minimum_permutation[i + 1]][0]]
+            last_to_first_y = [points[minimum_permutation[i]][1], points[minimum_permutation[i + 1]][1]]
             plt.plot(last_to_first_x, last_to_first_y)
             plt.text(points[minimum_permutation[i]][0], points[minimum_permutation[i]][1], minimum_permutation[i])
     plt.show()
@@ -116,8 +116,8 @@ def brute_force_method(num_point, space_size, seed, plot=False):
 
 
 # EXAMPLE USAGE
-# number_of_points = 10
-# space_size = 100
-# seed = 1
+number_of_points = 10
+space_size = 100
+seed = 1
 
-# brute_force_method(number_of_points, space_size, seed, True)
+brute_force_method(number_of_points, space_size, seed, True)
