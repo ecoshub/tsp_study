@@ -191,6 +191,7 @@ def length_of_route(points):
 
 def draw_minimum_distance(points, space_size, minimum_distance, polygon):
     # drawing plot for visualising points and route.
+
     len_points = len(points)
     # setting plotting environment.
     sns.set(style='darkgrid')
