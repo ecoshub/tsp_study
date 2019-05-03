@@ -255,4 +255,4 @@ def wrap_method(num_point, space_size, seed, plot=False):
 # space_size = 100
 # seed = 1
 
-# wrap_method(num_point, space_size, seed, False)
+# wrap_method(num_point, space_size, seed, True)

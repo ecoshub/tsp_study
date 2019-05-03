@@ -116,8 +116,8 @@ def brute_force_method(num_point, space_size, seed, plot=False):
 
 
 # EXAMPLE USAGE
-number_of_points = 10
-space_size = 100
-seed = 1
+# number_of_points = 10
+# space_size = 100
+# seed = 1
 
-brute_force_method(number_of_points, space_size, seed, True)
+# brute_force_method(number_of_points, space_size, seed, True)
