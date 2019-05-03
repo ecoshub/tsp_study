@@ -143,7 +143,8 @@ def minimum_deviations(exterior_polygon, points, distance_matrix):
 
 
 def wrap_points(points):
-    # wraping points, finding most exterior points.
+    # finding most exterior points.
+
     # starting with left bottom point.
     starting_index = find_corner_points_index(points)
     selected_index = starting_index
