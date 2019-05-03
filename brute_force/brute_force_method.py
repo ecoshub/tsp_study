@@ -7,7 +7,6 @@ import random
 
 def create_points(number_of_points, space_size, seed):
     # creating random points.
-
     # generating same random set for debug or work on it.
     random.seed(seed)
     # using space_size as universal set and getting random samples from it.
@@ -24,7 +23,6 @@ def create_distance_matrix(points):
     # calculating relative distance of all points with other points
     # so do not calculate same distance over and over again.
     # for example: distance between points[i] and points[j] is distance[i][j]
-
     # size of points set.
     len_points = len(points)
     # creating a null matrix.
@@ -39,7 +37,6 @@ def create_distance_matrix(points):
 
 def minumum_permutation_calculation(points, distance_matrix):
     # creating and trying all posible permutations for finding shortest route.
-
     len_points = len(points)
     # creating a list of index.
     index = [each for each in range(len_points)]
@@ -102,7 +99,6 @@ def draw_minimum_distance(points, space_size, minimum_distance, minimum_permutat
 
 def brute_force_method(num_point, space_size, seed, plot=False):
     # master function for this method.
-
     # creating points.
     points = create_points(num_point, space_size, seed)
     # creating distance matrix.

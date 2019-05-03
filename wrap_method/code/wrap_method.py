@@ -6,7 +6,6 @@ import random
 
 def create_points(number_of_points, space_size, seed):
     # creating random points.
-
     # generating same random set for debug or work on it.
     random.seed(seed)
     # using space_size as universal set and getting random samples from it.
@@ -22,7 +21,6 @@ def create_distance_matrix(points):
     # calculating relative distance of all points with other points
     # so do not calculate same distance over and over again.
     # for example: distance between points[i] and points[j] is distance[i][j]
-
     # size of points set.
     len_points = len(points)
     # creating a null matrix.
@@ -144,7 +142,6 @@ def minimum_deviations(exterior_polygon, points, distance_matrix):
 
 def wrap_points(points):
     # finding most exterior points.
-
     # starting with left bottom point.
     starting_index = find_corner_points_index(points)
     selected_index = starting_index
@@ -192,7 +189,6 @@ def length_of_route(points):
 
 def draw_minimum_distance(points, space_size, minimum_distance, polygon):
     # drawing plot for visualising points and route.
-
     len_points = len(points)
     # setting plotting environment.
     sns.set(style='darkgrid')
@@ -221,7 +217,6 @@ def draw_minimum_distance(points, space_size, minimum_distance, polygon):
 
 def wrap_method(num_point, space_size, seed, plot=False):
     # master function for this method.
-
     # creating points.
     points = create_points(num_point, space_size, seed)
     # creating distance matrix.
