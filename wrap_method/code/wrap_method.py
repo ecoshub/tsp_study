@@ -140,7 +140,7 @@ def minimum_deviations(exterior_polygon, points, distance_matrix):
     return all_deviations
 
 
-def wrap_points(points):
+def find_exterior_polygon(points):
     # finding most exterior points.
     # starting with left bottom point.
     starting_index = find_corner_points_index(points)
@@ -222,7 +222,7 @@ def wrap_method(num_point, space_size, seed, plot=False):
     # creating distance matrix.
     distance_matrix = create_distance_matrix(points)
     # creating exterior polygon.
-    exterior_polygon = wrap_points(points)
+    exterior_polygon = find_exterior_polygon(points)
     new_points = []
     # eliminating exterior polygons points.
     for i in range(len(points)):
