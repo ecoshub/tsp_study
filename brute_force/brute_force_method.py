@@ -49,7 +49,7 @@ def minumum_permutation_calculation(points, distance_matrix):
     current_sum = 0
     minimum_distance = float('inf')
     minimum_permutation = []
-    # iteration of all possible circler permutation.
+    # iteration of all possible circular permutation.
     for _ in range(number_of_permutation):
         current_permutation = next(permutations)
         for i in range(len_points):
