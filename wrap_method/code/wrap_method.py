@@ -41,7 +41,7 @@ def distance_calculation(first_point, second_point):
     return euclidean
 
 
-def find_corner_points_index(points):
+def corner_point(points):
     # for adding index value to points list making a new points list.
     sorted_array = []
     len_points = len(points)
@@ -57,7 +57,7 @@ def find_corner_points_index(points):
     return index
 
 
-def find_center(points):
+def get_center(points):
     sum_x_coordinate = 0
     sum_y_coordinate = 0
     for i, j in points:
@@ -143,11 +143,11 @@ def minimum_deviations(exterior_polygon, points, distance_matrix):
 def find_exterior_polygon(points):
     # finding most exterior points.
     # starting with left bottom point.
-    starting_index = find_corner_points_index(points)
+    starting_index = corner_point(points)
     selected_index = starting_index
     selected = points[selected_index]
     # finding center point.
-    center_x, center_y = find_center(points)
+    center_x, center_y = get_center(points)
     center = [center_x, center_y]
     exterior_polygon = []
     # stop condition.
@@ -176,7 +176,7 @@ def find_exterior_polygon(points):
     return exterior_polygon
 
 
-def length_of_route(points):
+def length_of_the_route(points):
     length = 0
     len_points = len(points)
     for i in range(len_points):
@@ -241,7 +241,7 @@ def wrap_method(num_point, space_size, seed, plot=False):
         exterior_polygon.insert(max_dev[2], new_points[max_dev[3]])
         new_points.pop(max_dev[3])
     # route total length.
-    length = length_of_route(exterior_polygon)
+    length = length_of_the_route(exterior_polygon)
     if plot:
         draw_minimum_distance(points, space_size, length, exterior_polygon)
     return length
